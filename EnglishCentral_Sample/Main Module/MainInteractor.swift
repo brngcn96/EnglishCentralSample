@@ -22,7 +22,17 @@ class MainInteractor : AnyInteractor{
             return
         }
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
-            <#code#>
+            guard let data = data, error == nil else {
+                return
+            }
+            
+            do {
+                let loctions = try decode([LocationEntity].self,from: data)
+                self?.presenter?.interactorDidDownloadLocation(result: .success(loctions))
+            } catch <#pattern#> {
+                <#statements#>
+            }
+
         }
         
     }
