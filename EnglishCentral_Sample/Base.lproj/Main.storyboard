@@ -30,6 +30,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="jMJ-7r-zJp"/>
+                    <connections>
+                        <outlet property="mapView" destination="OM9-L2-pcW" id="S2m-an-oXh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -8,6 +8,12 @@
 import Foundation
 import UIKit
 
+enum NetworkError : Error {
+    case networkFailed
+    case parsingFailed
+}
+
+
 protocol AnyPresenter {
     var router : AnyRouter? {get set}
     var interactor : AnyInteractor? {get set}

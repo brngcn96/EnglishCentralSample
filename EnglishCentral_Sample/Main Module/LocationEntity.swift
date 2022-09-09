@@ -7,7 +7,8 @@
 
 import Foundation
 
-class LocationEntity : Decodable {
+class LocationEntity : Codable {
     
+   
     
 }

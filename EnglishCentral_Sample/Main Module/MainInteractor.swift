@@ -18,7 +18,7 @@ class MainInteractor : AnyInteractor{
     var presenter: AnyPresenter?
     
     func downloadLocations() {
-        guard let url = URL(string: " https://places.demo.api.here.com/places/") else {
+        guard let url = URL(string: "https://places.demo.api.here.com/places/v1/discover/explore?at=52.5310%2C13.3848&app_id=DemoAppId01082013GAL&app_code=AJKnXv84fjrb0KIHawS0Tg") else {
             return
         }
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
@@ -27,13 +27,18 @@ class MainInteractor : AnyInteractor{
             }
             
             do {
-                let loctions = try decode([LocationEntity].self,from: data)
-                self?.presenter?.interactorDidDownloadLocation(result: .success(loctions))
-            } catch <#pattern#> {
-                <#statements#>
+                print(data)
+                let json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as? [String : Any]
+                
+                if let locations = json["items"] as 
+                self.presenter?.interactorDidDownloadLocation(result: .success(locations))
+            } catch  {
+                self.presenter?.interactorDidDownloadLocation(result: .failure(NetworkError.parsingFailed))
             }
 
         }
+        
+        task.resume()
         
     }
     

@@ -14,6 +14,7 @@
 		AF3DB57028CAA09D00FFE12B /* EnglishCentral_Sample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF3DB56E28CAA09D00FFE12B /* EnglishCentral_Sample.xcdatamodeld */; };
 		AF3DB57228CAA09E00FFE12B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF3DB57128CAA09E00FFE12B /* Assets.xcassets */; };
 		AF3DB57528CAA09E00FFE12B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF3DB57328CAA09E00FFE12B /* LaunchScreen.storyboard */; };
+		AF578A1428CBE05D00B73ABD /* PlacesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF578A1328CBE05D00B73ABD /* PlacesResponse.swift */; };
 		AF5EEEE428CAA2FB00420205 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5EEEE328CAA2FB00420205 /* MainInteractor.swift */; };
 		AF5EEEE628CAA30800420205 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5EEEE528CAA30800420205 /* MainPresenter.swift */; };
 		AF5EEEE828CAA31700420205 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5EEEE728CAA31700420205 /* MainRouter.swift */; };
@@ -30,6 +31,7 @@
 		AF3DB57128CAA09E00FFE12B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF3DB57428CAA09E00FFE12B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF3DB57628CAA09E00FFE12B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF578A1328CBE05D00B73ABD /* PlacesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesResponse.swift; sourceTree = "<group>"; };
 		AF5EEEE328CAA2FB00420205 /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
 		AF5EEEE528CAA30800420205 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		AF5EEEE728CAA31700420205 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 			children = (
 				AF3DB56928CAA09D00FFE12B /* MainViewController.swift */,
 				AF5EEEE328CAA2FB00420205 /* MainInteractor.swift */,
+				AF578A1328CBE05D00B73ABD /* PlacesResponse.swift */,
 				AF5EEEE528CAA30800420205 /* MainPresenter.swift */,
 				AF5EEEE728CAA31700420205 /* MainRouter.swift */,
 				AF5EEEE928CAA34D00420205 /* LocationEntity.swift */,
@@ -161,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF578A1428CBE05D00B73ABD /* PlacesResponse.swift in Sources */,
 				AF5EEEE628CAA30800420205 /* MainPresenter.swift in Sources */,
 				AF3DB56A28CAA09D00FFE12B /* MainViewController.swift in Sources */,
 				AF3DB56628CAA09D00FFE12B /* AppDelegate.swift in Sources */,
