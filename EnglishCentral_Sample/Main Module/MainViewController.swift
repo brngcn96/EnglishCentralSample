@@ -7,7 +7,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+
+protocol AnyView{
+    
+    
+}
+
+class MainViewController: UIViewController, AnyView {
 
     override func viewDidLoad() {
         super.viewDidLoad()

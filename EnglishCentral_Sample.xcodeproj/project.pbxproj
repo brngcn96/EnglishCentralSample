@@ -9,23 +9,31 @@
 /* Begin PBXBuildFile section */
 		AF3DB56628CAA09D00FFE12B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DB56528CAA09D00FFE12B /* AppDelegate.swift */; };
 		AF3DB56828CAA09D00FFE12B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DB56728CAA09D00FFE12B /* SceneDelegate.swift */; };
-		AF3DB56A28CAA09D00FFE12B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DB56928CAA09D00FFE12B /* ViewController.swift */; };
+		AF3DB56A28CAA09D00FFE12B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DB56928CAA09D00FFE12B /* MainViewController.swift */; };
 		AF3DB56D28CAA09D00FFE12B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF3DB56B28CAA09D00FFE12B /* Main.storyboard */; };
 		AF3DB57028CAA09D00FFE12B /* EnglishCentral_Sample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF3DB56E28CAA09D00FFE12B /* EnglishCentral_Sample.xcdatamodeld */; };
 		AF3DB57228CAA09E00FFE12B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF3DB57128CAA09E00FFE12B /* Assets.xcassets */; };
 		AF3DB57528CAA09E00FFE12B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF3DB57328CAA09E00FFE12B /* LaunchScreen.storyboard */; };
+		AF5EEEE428CAA2FB00420205 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5EEEE328CAA2FB00420205 /* MainInteractor.swift */; };
+		AF5EEEE628CAA30800420205 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5EEEE528CAA30800420205 /* MainPresenter.swift */; };
+		AF5EEEE828CAA31700420205 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5EEEE728CAA31700420205 /* MainRouter.swift */; };
+		AF5EEEEA28CAA34D00420205 /* LocationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5EEEE928CAA34D00420205 /* LocationEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AF3DB56228CAA09D00FFE12B /* EnglishCentral_Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnglishCentral_Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF3DB56528CAA09D00FFE12B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF3DB56728CAA09D00FFE12B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AF3DB56928CAA09D00FFE12B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AF3DB56928CAA09D00FFE12B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		AF3DB56C28CAA09D00FFE12B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF3DB56F28CAA09D00FFE12B /* EnglishCentral_Sample.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EnglishCentral_Sample.xcdatamodel; sourceTree = "<group>"; };
 		AF3DB57128CAA09E00FFE12B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF3DB57428CAA09E00FFE12B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF3DB57628CAA09E00FFE12B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF5EEEE328CAA2FB00420205 /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
+		AF5EEEE528CAA30800420205 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		AF5EEEE728CAA31700420205 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		AF5EEEE928CAA34D00420205 /* LocationEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +66,9 @@
 		AF3DB56428CAA09D00FFE12B /* EnglishCentral_Sample */ = {
 			isa = PBXGroup;
 			children = (
+				AF5EEEE228CAA29000420205 /* Main Module */,
 				AF3DB56528CAA09D00FFE12B /* AppDelegate.swift */,
 				AF3DB56728CAA09D00FFE12B /* SceneDelegate.swift */,
-				AF3DB56928CAA09D00FFE12B /* ViewController.swift */,
 				AF3DB56B28CAA09D00FFE12B /* Main.storyboard */,
 				AF3DB57128CAA09E00FFE12B /* Assets.xcassets */,
 				AF3DB57328CAA09E00FFE12B /* LaunchScreen.storyboard */,
@@ -68,6 +76,18 @@
 				AF3DB56E28CAA09D00FFE12B /* EnglishCentral_Sample.xcdatamodeld */,
 			);
 			path = EnglishCentral_Sample;
+			sourceTree = "<group>";
+		};
+		AF5EEEE228CAA29000420205 /* Main Module */ = {
+			isa = PBXGroup;
+			children = (
+				AF3DB56928CAA09D00FFE12B /* MainViewController.swift */,
+				AF5EEEE328CAA2FB00420205 /* MainInteractor.swift */,
+				AF5EEEE528CAA30800420205 /* MainPresenter.swift */,
+				AF5EEEE728CAA31700420205 /* MainRouter.swift */,
+				AF5EEEE928CAA34D00420205 /* LocationEntity.swift */,
+			);
+			path = "Main Module";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,8 +161,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF3DB56A28CAA09D00FFE12B /* ViewController.swift in Sources */,
+				AF5EEEE628CAA30800420205 /* MainPresenter.swift in Sources */,
+				AF3DB56A28CAA09D00FFE12B /* MainViewController.swift in Sources */,
 				AF3DB56628CAA09D00FFE12B /* AppDelegate.swift in Sources */,
+				AF5EEEE828CAA31700420205 /* MainRouter.swift in Sources */,
+				AF5EEEE428CAA2FB00420205 /* MainInteractor.swift in Sources */,
+				AF5EEEEA28CAA34D00420205 /* LocationEntity.swift in Sources */,
 				AF3DB57028CAA09D00FFE12B /* EnglishCentral_Sample.xcdatamodeld in Sources */,
 				AF3DB56828CAA09D00FFE12B /* SceneDelegate.swift in Sources */,
 			);
