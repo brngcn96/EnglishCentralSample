@@ -12,7 +12,7 @@ import MapKit
 protocol AnyView{
     var presenter : AnyPresenter? {get set}
     
-    func updateView(with locations : [LocationEntity])
+    func updateView(with locationItems : [Item])
     func updateView(with error : String)
     
 }
@@ -24,9 +24,9 @@ class MainViewController: UIViewController,MKMapViewDelegate, CLLocationManagerD
     
     var locationManager = CLLocationManager()
     
-    
-    
     var presenter: AnyPresenter?
+    
+    var locationsItems : [Item] = []
     
 
 
@@ -54,12 +54,16 @@ class MainViewController: UIViewController,MKMapViewDelegate, CLLocationManagerD
         super.viewDidLayoutSubviews()
     }
 
-    func updateView(with locations: [LocationEntity]) {
-        <#code#>
+    func updateView(with locationItems: [Item]) {
+        DispatchQueue.main.async {
+            self.locationsItems = locationItems
+        }
     }
     
     func updateView(with error: String) {
-        <#code#>
+        DispatchQueue.main.async {
+            self.locationsItems = []
+        }
     }
 
 

@@ -19,7 +19,7 @@ protocol AnyPresenter {
     var interactor : AnyInteractor? {get set}
     var view : AnyView? {get set }
     
-    func interactorDidDownloadLocation(result :Result<[LocationEntity],Error>)
+    func interactorDidDownloadLocation(result :Result<[Item],Error>)
     
 }
 
@@ -30,7 +30,7 @@ class MainPresenter : AnyPresenter {
     
     var interactor: AnyInteractor?
     
-    func interactorDidDownloadLocation(result: Result<[LocationEntity], Error>) {
+    func interactorDidDownloadLocation(result: Result<[Item], Error>) {
         switch result {
         case .success(let locations):
             //view update

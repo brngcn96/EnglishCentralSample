@@ -8,6 +8,7 @@
 import Foundation
 
 
+
 protocol AnyInteractor{
     var presenter : AnyPresenter? {get set}
     func downloadLocations()
@@ -28,10 +29,8 @@ class MainInteractor : AnyInteractor{
             
             do {
                 print(data)
-                let json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as? [String : Any]
-                
-                if let locations = json["items"] as 
-                self.presenter?.interactorDidDownloadLocation(result: .success(locations))
+                let locations = try JSONDecoder().decode(PlacesResponse.self,from: data)
+                self.presenter?.interactorDidDownloadLocation(result: .success(locations.results.items))
             } catch  {
                 self.presenter?.interactorDidDownloadLocation(result: .failure(NetworkError.parsingFailed))
             }

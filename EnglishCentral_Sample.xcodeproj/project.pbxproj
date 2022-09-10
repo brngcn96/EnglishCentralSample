@@ -18,7 +18,6 @@
 		AF5EEEE428CAA2FB00420205 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5EEEE328CAA2FB00420205 /* MainInteractor.swift */; };
 		AF5EEEE628CAA30800420205 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5EEEE528CAA30800420205 /* MainPresenter.swift */; };
 		AF5EEEE828CAA31700420205 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5EEEE728CAA31700420205 /* MainRouter.swift */; };
-		AF5EEEEA28CAA34D00420205 /* LocationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5EEEE928CAA34D00420205 /* LocationEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +34,6 @@
 		AF5EEEE328CAA2FB00420205 /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
 		AF5EEEE528CAA30800420205 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		AF5EEEE728CAA31700420205 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
-		AF5EEEE928CAA34D00420205 /* LocationEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +86,6 @@
 				AF578A1328CBE05D00B73ABD /* PlacesResponse.swift */,
 				AF5EEEE528CAA30800420205 /* MainPresenter.swift */,
 				AF5EEEE728CAA31700420205 /* MainRouter.swift */,
-				AF5EEEE928CAA34D00420205 /* LocationEntity.swift */,
 			);
 			path = "Main Module";
 			sourceTree = "<group>";
@@ -170,7 +167,6 @@
 				AF3DB56628CAA09D00FFE12B /* AppDelegate.swift in Sources */,
 				AF5EEEE828CAA31700420205 /* MainRouter.swift in Sources */,
 				AF5EEEE428CAA2FB00420205 /* MainInteractor.swift in Sources */,
-				AF5EEEEA28CAA34D00420205 /* LocationEntity.swift in Sources */,
 				AF3DB57028CAA09D00FFE12B /* EnglishCentral_Sample.xcdatamodeld in Sources */,
 				AF3DB56828CAA09D00FFE12B /* SceneDelegate.swift in Sources */,
 			);
