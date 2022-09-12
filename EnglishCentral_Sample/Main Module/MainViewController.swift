@@ -28,7 +28,7 @@ class MainViewController: UIViewController,MKMapViewDelegate, CLLocationManagerD
     
     var locationsItems : [Item] = []
     
-
+    
 
     
     override func viewDidLoad() {
@@ -39,7 +39,11 @@ class MainViewController: UIViewController,MKMapViewDelegate, CLLocationManagerD
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
+        //MainRouter.startExecution(initialView: self)
+        MainRouter.startExecution(initialView: self)
+        self.presenter!.interactor!.downloadLocations()
         
+        //apiTest()
         
     }
     
@@ -57,6 +61,7 @@ class MainViewController: UIViewController,MKMapViewDelegate, CLLocationManagerD
     func updateView(with locationItems: [Item]) {
         DispatchQueue.main.async {
             self.locationsItems = locationItems
+            print(locationItems[0].address.country)
         }
     }
     
@@ -66,6 +71,34 @@ class MainViewController: UIViewController,MKMapViewDelegate, CLLocationManagerD
         }
     }
 
+    
+    
+    func apiTest(){
+        
+        guard let url = URL(string: "https://places.demo.api.here.com/places/v1/discover/explore?at=52.5310%2C13.3848&Accept-Language=en-US%2Cen%3Bq%3D0.9&app_id=DemoAppId01082013GAL&app_code=AJKnXv84fjrb0KIHawS0Tg") else {
+            return
+        }
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+            guard let data = data, error == nil else {
+                return
+            }
+            
+            do {
+                
+                let locations = try JSONDecoder().decode(PlacesResponse.self,from: data)
+                //print(locations.results.items[0].title)
+            
+                
+
+            } catch  {
+                print(error)
+            }
+            
+        }
+        
+        task.resume()
+        
+    }
 
 }
 

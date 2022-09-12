@@ -29,15 +29,20 @@ class MainPresenter : AnyPresenter {
     var router: AnyRouter?
     
     var interactor: AnyInteractor?
+
+    
     
     func interactorDidDownloadLocation(result: Result<[Item], Error>) {
+        
+        
         switch result {
         case .success(let locations):
-            //view update
-            print("update")
+            view?.updateView(with: locations)
+            
+            
         case .failure(let error):
-            //view update with error
-            print("error")
+            view?.updateView(with: error.localizedDescription)
+            print(error)
         
         }
     }
